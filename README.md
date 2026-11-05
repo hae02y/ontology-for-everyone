@@ -41,4 +41,9 @@
 
 ## 발행 상태
 
-이 저장소의 Markdown이 편집 가능한 원본입니다. GitHub·위키독스 발행 상태는 [진행 기록](docs/STATUS.md)에 실제 확인 결과로 기록합니다. 00~16장 원고와 장별 SVG 17개, 책 표지 1개를 갖추었습니다.
+이 저장소의 Markdown이 편집 가능한 원본입니다. 00~16장 원고와 장별 SVG 17개, 책 표지 1개를 갖추었습니다.
+
+- GitHub: https://github.com/hae02y/ontology-for-everyone (공개 원고)
+- 위키독스: 책 생성·공개 전
+
+발행 상태와 확인 결과는 [진행 기록](docs/STATUS.md)에 남깁니다.
