@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
+<title id="title">명시된 종류와 개별 사실에서 추론한 분류</title><desc id="desc">긴급 반품 요청이 반품 요청의 하위 종류이고 R-17이 긴급 반품 요청이면 R-17은 반품 요청이라는 결론을 얻는다. 배송 여부는 이 정보만으로 알 수 없다.</desc>
+<rect width="1200" height="590" rx="24" fill="#f8fafc"/><text x="60" y="58" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#0f172a">OWL: 정해 둔 의미에서 따라 나오는 사실</text>
+<rect x="70" y="130" width="280" height="105" rx="18" fill="#dbeafe"/><text x="210" y="174" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#1e3a8a">긴급 반품 요청</text><text x="210" y="206" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#1e3a8a">하위 종류</text>
+<rect x="465" y="130" width="280" height="105" rx="18" fill="#dcfce7"/><text x="605" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#14532d">반품 요청</text>
+<rect x="860" y="130" width="280" height="105" rx="18" fill="#e0e7ff"/><text x="1000" y="189" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#3730a3">고객 요청</text>
+<path d="M350 183H465M745 183H860" stroke="#64748b" stroke-width="5"/><text x="407" y="165" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#334155">의 하위</text><text x="802" y="165" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#334155">의 하위</text>
+<rect x="70" y="345" width="280" height="95" rx="18" fill="#fef3c7"/><text x="210" y="385" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#92400e">개별 요청 R-17</text><text x="210" y="416" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#92400e">명시: 긴급 반품 요청</text>
+<path d="M210 345V235" stroke="#0f766e" stroke-width="5"/><path d="M350 393H860" stroke="#0f766e" stroke-width="4" stroke-dasharray="10 8"/><text x="605" y="378" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#0f766e">추론: 반품 요청이며 고객 요청</text>
+<rect x="860" y="345" width="280" height="95" rx="18" fill="#fee2e2"/><text x="1000" y="384" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#991b1b">배송 여부?</text><text x="1000" y="415" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#991b1b">정보 없음 = 모름</text>
+<text x="60" y="548" font-family="Arial,sans-serif" font-size="17" fill="#475569">가상의 요청 · 저자 제작 개념도</text>
+</svg>
