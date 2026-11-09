@@ -1,0 +1,32 @@
+@prefix ex: <https://example.invalid/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:C-204 a ex:Customer ; ex:sourceSystem "customer-system" .
+
+ex:O-391 a ex:Order ;
+    ex:placedBy ex:C-204 ;
+    ex:hasItem ex:OI-391-1, ex:OI-391-2 ;
+    ex:sourceSystem "order-system" .
+
+ex:OI-391-1 a ex:OrderItem ; ex:inOrder ex:O-391 .
+ex:OI-391-2 a ex:OrderItem ; ex:inOrder ex:O-391 .
+
+ex:S-88 a ex:Shipment ;
+    ex:fulfillsOrder ex:O-391 ; ex:shipsItem ex:OI-391-1 ;
+    ex:status ex:Delivered ; ex:sourceSystem "shipping-system" ;
+    ex:observedAt "2026-11-04T10:30:00+09:00"^^xsd:dateTime .
+
+ex:S-89 a ex:Shipment ;
+    ex:fulfillsOrder ex:O-391 ; ex:shipsItem ex:OI-391-2 ;
+    ex:status ex:Delivered ; ex:sourceSystem "shipping-system" ;
+    ex:observedAt "2026-11-04T10:45:00+09:00"^^xsd:dateTime .
+
+ex:R-17 a ex:ReturnRequest ;
+    ex:targetsItem ex:OI-391-2 ;
+    ex:status ex:Requested ; ex:refundStatus ex:Pending ;
+    ex:sourceSystem "returns-system" ;
+    ex:observedAt "2026-11-04T11:05:00+09:00"^^xsd:dateTime .
+
+ex:Delivered a ex:ShipmentStatus .
+ex:Requested a ex:ReturnStatus .
+ex:Pending a ex:RefundStatus .

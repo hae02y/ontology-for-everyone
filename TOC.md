@@ -17,3 +17,4 @@
 - [14. AI 에이전트와 업무 도구에 연결하기](pages/14-agents-and-tools.md)
 - [15. 운영·권한·평가](pages/15-governance-and-evaluation.md)
 - [16. 내 업무 온톨로지 만들기](pages/16-workbook.md)
+- [17. 처음부터 끝까지: 다온상점 사례로 온톨로지 완성하기](pages/17-end-to-end-case-study.md)

@@ -1,0 +1,13 @@
+PREFIX ex: <https://example.invalid/ontology/>
+
+SELECT ?return ?item ?order ?shipment ?shipmentStatus
+WHERE {
+  VALUES ?return { ex:R-17 }
+  ?return ex:targetsItem ?item .
+  ?item ex:inOrder ?order .
+  OPTIONAL {
+    ?shipment ex:shipsItem ?item ;
+              ex:fulfillsOrder ?order ;
+              ex:status ?shipmentStatus .
+  }
+}

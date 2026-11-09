@@ -1,0 +1,28 @@
+@prefix ex: <https://example.invalid/ontology/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:ReturnRequestShape a sh:NodeShape ;
+    sh:targetClass ex:ReturnRequest ;
+    sh:property [
+        sh:path ex:targetsItem ;
+        sh:minCount 1 ;
+        sh:class ex:OrderItem ;
+        sh:message "반품 요청에는 확인된 주문 항목이 하나 이상 필요합니다."@ko
+    ] ;
+    sh:property [
+        sh:path ex:observedAt ;
+        sh:minCount 1 ;
+        sh:datatype xsd:dateTime
+    ] .
+
+ex:OrderItemShape a sh:NodeShape ;
+    sh:targetClass ex:OrderItem ;
+    sh:property [
+        sh:path ex:inOrder ;
+        sh:minCount 1 ;
+        sh:class ex:Order
+    ] .
+
+# 이 검사는 구조 적합성만 확인합니다. 고객 본인 확인, 환불 승인,
+# 실제 배송 상태의 진실성과 신선도는 별도 업무 절차가 필요합니다.

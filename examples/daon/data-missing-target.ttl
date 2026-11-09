@@ -1,0 +1,8 @@
+@prefix ex: <https://example.invalid/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# 일부러 대상 주문 항목을 빠뜨린 검증 실습용 가상 기록입니다.
+ex:R-18 a ex:ReturnRequest ;
+    ex:status ex:Requested ; ex:refundStatus ex:Pending ;
+    ex:sourceSystem "returns-system" ;
+    ex:observedAt "2026-11-04T11:10:00+09:00"^^xsd:dateTime .

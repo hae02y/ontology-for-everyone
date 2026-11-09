@@ -25,3 +25,10 @@
 | [University of Toronto Enterprise Modelling](https://eil.mie.utoronto.ca/theory/enterprise-modelling/entmethod/) | 학술 모델링 방법의 원 출처. W3C 규범 문서와 구분 |
 
 이 책의 고객·주문·정책·측정치는 설명을 위한 가상 사례입니다. 표와 도식도 자체 제작입니다.
+
+## 2026년 11월 9일 실습 예제 확인
+
+`examples/daon`의 Turtle 파일을 RDFLib 7.6.0으로 읽고, pySHACL 0.40.2로 검증했습니다. `data.ttl`은 조건에 맞았고, `data-missing-target.ttl`을 합치면 `R-18`의 `targetsItem` 누락이 보고됐습니다. SPARQL 질의는 `R-17 → OI-391-2 → O-391 → S-89` 한 행을 반환했습니다. 이는 **가상 데이터와 이 예제의 검증 조건**에 대한 실행 확인이며, 실제 고객지원 정책의 적합성이나 외부 서비스의 성능 평가가 아닙니다.
+
+- [RDFLib 배포 정보](https://pypi.org/project/rdflib/)
+- [pySHACL 배포 정보](https://pypi.org/project/pyshacl/)

@@ -1,0 +1,42 @@
+@prefix ex: <https://example.invalid/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:DaonSupport a owl:Ontology ;
+    rdfs:label "다온상점 고객지원 예시 온톨로지"@ko .
+
+ex:Customer a owl:Class ; rdfs:label "고객"@ko .
+ex:Order a owl:Class ; rdfs:label "주문"@ko .
+ex:OrderItem a owl:Class ; rdfs:label "주문 항목"@ko .
+ex:Shipment a owl:Class ; rdfs:label "배송건"@ko .
+ex:ReturnRequest a owl:Class ;
+    rdfs:label "반품 요청"@ko ;
+    skos:altLabel "반품 신청"@ko .
+
+ex:placedBy a owl:ObjectProperty ;
+    rdfs:domain ex:Order ; rdfs:range ex:Customer ;
+    rdfs:label "주문한 고객"@ko .
+ex:hasItem a owl:ObjectProperty ;
+    rdfs:domain ex:Order ; rdfs:range ex:OrderItem ;
+    owl:inverseOf ex:inOrder ; rdfs:label "주문에 속한 항목"@ko .
+ex:inOrder a owl:ObjectProperty ;
+    rdfs:domain ex:OrderItem ; rdfs:range ex:Order ;
+    rdfs:label "항목이 속한 주문"@ko .
+ex:fulfillsOrder a owl:ObjectProperty ;
+    rdfs:domain ex:Shipment ; rdfs:range ex:Order ;
+    rdfs:label "배송건이 이행하는 주문"@ko .
+ex:shipsItem a owl:ObjectProperty ;
+    rdfs:domain ex:Shipment ; rdfs:range ex:OrderItem ;
+    rdfs:label "배송건에 담긴 항목"@ko .
+ex:targetsItem a owl:ObjectProperty ;
+    rdfs:domain ex:ReturnRequest ; rdfs:range ex:OrderItem ;
+    rdfs:label "반품 대상 항목"@ko .
+
+ex:status a owl:ObjectProperty ; rdfs:label "업무 상태"@ko .
+ex:refundStatus a owl:ObjectProperty ; rdfs:label "환불 상태"@ko .
+ex:sourceSystem a owl:DatatypeProperty ; rdfs:label "출처 시스템"@ko .
+ex:observedAt a owl:DatatypeProperty ; rdfs:label "상태 확인 시각"@ko .
+
+# domain/range는 사용 가능한 값의 닫힌 목록을 검사하지 않습니다.
+# 누락·형식 검사와 실행 권한은 별도의 SHACL·업무 정책에서 다룹니다.
