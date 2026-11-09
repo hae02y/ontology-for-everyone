@@ -46,6 +46,8 @@
 이 저장소의 Markdown이 편집 가능한 원본입니다. 00~17장 원고와 장별 SVG 18개, 책 표지 1개를 갖추었습니다.
 
 - GitHub: https://github.com/hae02y/ontology-for-everyone (공개 원고)
-- 위키독스: https://wikidocs.net/book/22079 (00~16장 공개, 17장 반영 예정)
+- 위키독스: https://wikidocs.net/book/22079 (00~17장, 18개 페이지 공개 확인)
 
 발행 상태와 페이지별 확인 결과는 [진행 기록](docs/STATUS.md)과 [위키독스 페이지 기록](docs/WIKIDOCS_PAGES.md)에 남깁니다.
+
+위키독스 공개본은 현재 공식 CLI로 만든 일반 책입니다. GitHub 원고를 수정한 뒤에는 해당 위키독스 페이지도 갱신해야 합니다.
